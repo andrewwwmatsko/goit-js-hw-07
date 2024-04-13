@@ -14,13 +14,10 @@ body {
 }
 
 .gallery {
+  list-style-type: none;
   display: flex;
-  padding: 100px 156px;
   column-gap: 24px;
   row-gap: 48px;
   flex-wrap: wrap;
   max-width: 1472px;
-}
-.gallery li {
-  list-style-type: none;
 }
