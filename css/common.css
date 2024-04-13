@@ -21,3 +21,6 @@ body {
   flex-wrap: wrap;
   max-width: 1472px;
 }
+.gallery li {
+  list-style-type: none;
+}
