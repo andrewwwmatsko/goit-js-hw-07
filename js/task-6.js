@@ -19,6 +19,8 @@ function createBoxes(amount) {
 
     newDiv.style.width = `${size}px`;
     newDiv.style.height = `${size}px`;
+    newDiv.style.marginTop = "5px";
+    newDiv.style.marginBottom = "5px";
     newDiv.style.backgroundColor = getRandomHexColor();
 
     resultArea.append(newDiv);
