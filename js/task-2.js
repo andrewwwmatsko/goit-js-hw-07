@@ -27,14 +27,10 @@ const images = [
 
 const gallery = document.querySelector(".gallery");
 
-for (const image of images) {
-  const img = document.createElement("img");
-  const li = document.createElement("li");
-  gallery.append(li);
-  img.src = image.url;
-  img.alt = image.alt;
-  img.width = 360;
-  img.height = 300;
+const imgs = images
+  .map((image) => {
+    return `<li><img class="image" src="${image.url}" alt="${image.alt}"></li>`;
+  })
+  .join("");
 
-  li.append(img);
-}
+gallery.innerHTML = imgs;
