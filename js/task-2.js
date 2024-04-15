@@ -33,4 +33,6 @@ const imgs = images
   })
   .join("");
 
-gallery.innerHTML = imgs;
+// gallery.innerHTML = imgs;
+
+gallery.insertAdjacentHTML("afterbegin", imgs);
