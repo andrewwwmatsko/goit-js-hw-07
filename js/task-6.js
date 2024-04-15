@@ -13,18 +13,20 @@ const destroyBtn = document.querySelector("[data-destroy]");
 const resultArea = document.querySelector("#boxes");
 
 function createBoxes(amount) {
+  const resultArr = [];
+
   for (let i = 0; i < amount; i++) {
     const newDiv = document.createElement("div");
     const size = 30 + i * 10;
 
+    newDiv.style.margin = "5px";
     newDiv.style.width = `${size}px`;
     newDiv.style.height = `${size}px`;
-    newDiv.style.marginTop = "5px";
-    newDiv.style.marginBottom = "5px";
     newDiv.style.backgroundColor = getRandomHexColor();
 
-    resultArea.append(newDiv);
+    resultArr.push(newDiv);
   }
+  resultArea.append(...resultArr);
 }
 
 function destroyBoxes() {
